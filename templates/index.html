@@ -14,13 +14,17 @@
     </header>
     <main>
         <div class="container">
-            <h2>Coloque sua idade e descubra seu pokemon!</h2>
+            <h2>Coloque seu nome e sua idade e descubra seu pokemon!</h2>
             <div class="card">
                 <form action="/" method="POST">
                     <img src="{{ imagem }}" class="card-img-top" alt="">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="idade" class="form-label">Idade: {{ idade }}</label>
+                            {% if idade %}
+                                <label for="nome1" class="form-label">Nome: {{ nome1 }}</label> <br>
+                                <label for="idade" class="form-label">Idade: {{ idade }}</label>
+                            {% endif %}
+                            <input type="text" class="form-control" id="nome1" name="nome1" placeholder="Digite seu nome" required>
                             <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade" required>
                             <button type="submit" class="btn btn-primary">Buscar</button>
                             {% if idade %}

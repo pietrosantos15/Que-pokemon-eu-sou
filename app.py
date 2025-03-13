@@ -31,6 +31,7 @@ def index():
     if request.method == 'POST':
 
         idade = int(request.form['idade'])
+        nome1 = request.form['nome1']
 
         if idade > 100 or idade < 1:
             erro = "Idade inválida"
@@ -50,7 +51,7 @@ def index():
             habilidades = [h["ability"]["name"] for h in data["abilities"]] # precisa disso para pegar direto as habildiades
             imagem = data["sprites"]["front_default"]
 
-            return render_template('index.html',nome=nome, idade=idade, tipos=tipos, peso=peso, altura=altura, habilidades=habilidades, imagem=imagem,)
+            return render_template('index.html',nome=nome, idade=idade, tipos=tipos, peso=peso, altura=altura, habilidades=habilidades, imagem=imagem,nome1=nome1 )
 
         
 
