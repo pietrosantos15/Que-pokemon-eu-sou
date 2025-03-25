@@ -24,7 +24,7 @@
                                 <label for="nome1" class="form-label">Nome: {{ nome1 }}</label> <br>
                                 <label for="idade" class="form-label">Idade: {{ idade }}</label>
                             {% endif %}
-                            <input type="text" class="form-control" id="nome1" name="nome1" placeholder="Digite seu nome" required>
+                            <input type="text" maxlength="11" class="form-control" id="nome1" name="nome1" placeholder="Digite seu nome" required >
                             <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade" required>
                             <button type="submit" class="btn btn-primary">Buscar</button>
                             {% if idade %}
