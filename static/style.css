@@ -1,120 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+/* Importação de fontes modernas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #3b82f6;
+    --bg-header: #FFDC64;
+    --bg-body: #f8fafc;
+    --text-main: #1e293b;
+    --white: #ffffff;
 }
 
-
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 header {
-    height: 18vh;
-    padding: 20px 0;
-    background-color: #FFDC64;
+    background-color: var(--bg-header);
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header img {
-    height: 150px;
-    width: 150px;
-    margin: 0 20px;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container {
-    width: 800px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card {
-    width: 300px;
-    height: auto;
-    margin: 20px auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.card-body {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-body .form-label {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.card-body .form-control {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.card-body .btn {
-    width: 100%;
-    padding: 8px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.card-body .btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.card-body p {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 10px;
+    height: 80%;
+    width: auto;
+    object-fit: contain;
 }
 
 h2 {
-    margin-top: 15px;
-    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #334155;
+}
+
+.container {
+    max-width: 500px; /* Ajustado para ficar melhor em telas menores */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    background-color: #f1f5f9;
+    padding: 20px;
+    min-height: 200px;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    margin-bottom: 15px;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilização das informações do Pokemon */
+.card-body p {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary-color);
 }
 
 footer {
-    font-size: 25px;
-    margin-top: 30px;
-    width: 100%;
-    padding: 20px 0;
-    background-color: #1400f0;
-    color: #000000;
+    margin-top: auto;
+    padding: 25px;
+    background-color: #1e293b;
+    color: #cbd5e1;
     text-align: center;
+    font-weight: 500;
 }
